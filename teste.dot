@@ -1,0 +1,49 @@
+digraph G {
+	node_2->node_3;
+	node_2->node_7;
+	node_4->node_5;
+	node_4->node_6;
+	node_7->node_8;
+	node_7->node_9;
+	node_11->node_12;
+	node_11->node_13;
+	node_11->node_15;
+	node_11->node_18;
+	node_13->node_14;
+	node_18->node_19;
+	node_18->node_21;
+	node_19->node_20;
+	node_21->node_22;
+	node_0->node_1;
+	node_0->node_10;
+	node_1->node_2;
+	node_3->node_4;
+	node_10->node_11;
+	node_15->node_16;
+	node_15->node_17;
+	node_0 [ fillcolor=aliceblue, label="Novo programa para criar mapas conceituais", shape=box, style="rounded,filled" ];
+	node_1 [ label="onde", shape=plaintext ];
+	node_10 [ fillcolor=aliceblue, label="que ainda não está pronto", shape=box, style="rounded,filled" ];
+	node_11 [ label="pois", shape=plaintext ];
+	node_12 [ fillcolor=aliceblue, label="ainda não é capaz de criar conexões fora de hierarquia", shape=box, style="rounded,filled" ];
+	node_13 [ fillcolor=aliceblue, label="frases longas ainda são um problema.\n Elas são necessarias para colocar,\n por exemplo, um paragrafo de um texto.", shape=box, style="rounded,filled" ];
+	node_14 [ fillcolor=aliceblue, label="Olha! com \\n elas funcionaram!", shape=box, style="rounded,filled" ];
+	node_15 [ fillcolor=aliceblue, label="Ainda não permite nenhum tipo de customização do estilo", shape=box, style="rounded,filled" ];
+	node_16 [ fillcolor=aliceblue, label="Customização do estilo de um nó específico", shape=box, style="rounded,filled" ];
+	node_17 [ fillcolor=aliceblue, label="Criação de um tema para o mapa", shape=box, style="rounded,filled" ];
+	node_18 [ fillcolor=aliceblue, label="necessário chamar o 'dot' para criar o pdf ou svg ou png...", shape=box, style="rounded,filled" ];
+	node_19 [ label="prós", shape=plaintext ];
+	node_2 [ fillcolor=aliceblue, label="Os mapas são criados a partir de texto", shape=box, style="rounded,filled" ];
+	node_20 [ fillcolor=aliceblue, label="permite editar o dot", shape=box, style="rounded,filled" ];
+	node_21 [ label="contra", shape=plaintext ];
+	node_22 [ fillcolor=aliceblue, label="sempre exige dois passis", shape=box, style="rounded,filled" ];
+	node_3 [ label="porque", shape=plaintext ];
+	node_4 [ fillcolor=aliceblue, label="Facilita a criação", shape=box, style="rounded,filled" ];
+	node_5 [ fillcolor=aliceblue, label="Usuário não precisa preocupar-se com o layout", shape=box, style="rounded,filled" ];
+	node_6 [ fillcolor=aliceblue, label="Rapidez em colocar o conteúdo", shape=box, style="rounded,filled" ];
+	node_7 [ label="como", shape=plaintext ];
+	node_8 [ fillcolor=aliceblue, label="Analisando a endentação do texto", shape=box, style="rounded,filled" ];
+	node_9 [ fillcolor=aliceblue, label="Criando o mapa com o Graphviz", shape=box, style="rounded,filled" ];
+
+}
+

@@ -1,0 +1,23 @@
+Novo programa para criar mapas conceituais
+	--onde--
+		Os mapas são criados a partir de texto
+			--porque--
+				Facilita a criação
+					Usuário não precisa preocupar-se com o layout
+					Rapidez em colocar o conteúdo
+			--como--
+				Analisando a endentação do texto
+				Criando o mapa com o Graphviz
+	que ainda não está pronto
+		--pois--
+			ainda não é capaz de criar conexões fora de hierarquia
+			frases longas ainda são um problema.\n Elas são necessarias para colocar,\n por exemplo, um paragrafo de um texto.
+			 	Olha! com \\n elas funcionaram!
+			Ainda não permite nenhum tipo de customização do estilo
+				Customização do estilo de um nó específico
+				Criação de um tema para o mapa
+			necessário chamar o 'dot' para criar o pdf ou svg ou png...
+				--prós--
+					permite editar o dot
+				--contra--
+					sempre exige dois passis
