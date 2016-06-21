@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"regexp"
 	"strings"
 
 	"github.com/awalterschulze/gographviz"
@@ -26,12 +27,34 @@ func cm(lines []string) {
 	var nodeDepth int
 	var content string
 
+	extconn := make([]extraconn, 0)
+	reconn := regexp.MustCompile("#[0-9]+")
+
 	for i := 0; i < len(lines); i++ {
 		if lines[i] != "" {
 			nodeAttr := make(map[string]string)
 			nodeName = fmt.Sprintf("node_%d", i)
 			nodeDepth = strings.Count(lines[i], "\t")
 			content = strings.TrimSpace(lines[i])
+
+			// extra connections (non hierarquical)
+			if ec := reconn.FindAllString(content, -1); ec != nil {
+				for _, k := range ec {
+					found := false
+					for c := range extconn {
+						if k == extconn[c].id {
+							extconn[c].nodes[1] = nodeName
+							found = true
+						}
+					}
+					if !found {
+						extconn = append(extconn, extraconn{id: k, nodes: [2]string{nodeName, ""}})
+					}
+				}
+				content = reconn.ReplaceAllString(content, "")
+			}
+
+			content = strings.TrimSpace(content)
 			if strings.Count(content, "--") >= 2 {
 				nodeAttr["label"] = "\"" + strings.Trim(content, "--") + "\""
 				nodeAttr["shape"] = "plaintext"
@@ -79,6 +102,14 @@ func cm(lines []string) {
 		for _, v := range val {
 			g.AddEdge(key, v, true, nil)
 		}
+	}
+
+	attr := make(map[string]string)
+	attr["dir"] = "none"
+	attr["style"] = "dashed"
+	for i := range extconn {
+
+		g.AddEdge(extconn[i].nodes[0], extconn[i].nodes[1], true, attr)
 	}
 	s := g.String()
 	fmt.Println(s)

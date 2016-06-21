@@ -1,14 +1,16 @@
 digraph G {
-	node_2->node_3;
-	node_2->node_7;
-	node_4->node_5;
-	node_4->node_6;
+	graph [fontname = "helvetica"];
+ 	node [fontname = "helvetica"];
 	node_7->node_8;
 	node_7->node_9;
-	node_11->node_12;
-	node_11->node_13;
-	node_11->node_15;
-	node_11->node_18;
+	node_10->node_11;
+	node_15->node_16;
+	node_15->node_17;
+	node_2->node_3;
+	node_2->node_7;
+	node_3->node_4;
+	node_4->node_5;
+	node_4->node_6;
 	node_13->node_14;
 	node_18->node_19;
 	node_18->node_21;
@@ -17,10 +19,14 @@ digraph G {
 	node_0->node_1;
 	node_0->node_10;
 	node_1->node_2;
-	node_3->node_4;
-	node_10->node_11;
-	node_15->node_16;
-	node_15->node_17;
+	node_11->node_12;
+	node_11->node_13;
+	node_11->node_15;
+	node_11->node_18;
+	node_0->node_24[ dir=none, style=dashed ];
+	node_5->node_6[ dir=none, style=dashed ];
+	node_5->node_8[ dir=none, style=dashed ];
+	node_6->node_24[ dir=none, style=dashed ];
 	node_0 [ fillcolor=aliceblue, label="Novo programa para criar mapas conceituais", shape=box, style="rounded,filled" ];
 	node_1 [ label="onde", shape=plaintext ];
 	node_10 [ fillcolor=aliceblue, label="que ainda não está pronto", shape=box, style="rounded,filled" ];
@@ -36,7 +42,8 @@ digraph G {
 	node_2 [ fillcolor=aliceblue, label="Os mapas são criados a partir de texto", shape=box, style="rounded,filled" ];
 	node_20 [ fillcolor=aliceblue, label="permite editar o dot", shape=box, style="rounded,filled" ];
 	node_21 [ label="contra", shape=plaintext ];
-	node_22 [ fillcolor=aliceblue, label="sempre exige dois passis", shape=box, style="rounded,filled" ];
+	node_22 [ fillcolor=aliceblue, label="sempre exige dois passos", shape=box, style="rounded,filled" ];
+	node_24 [ label="principal", shape=plaintext ];
 	node_3 [ label="porque", shape=plaintext ];
 	node_4 [ fillcolor=aliceblue, label="Facilita a criação", shape=box, style="rounded,filled" ];
 	node_5 [ fillcolor=aliceblue, label="Usuário não precisa preocupar-se com o layout", shape=box, style="rounded,filled" ];
@@ -46,4 +53,3 @@ digraph G {
 	node_9 [ fillcolor=aliceblue, label="Criando o mapa com o Graphviz", shape=box, style="rounded,filled" ];
 
 }
-

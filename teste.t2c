@@ -1,12 +1,12 @@
-Novo programa para criar mapas conceituais
+Novo programa para criar mapas conceituais #4
 	--onde--
 		Os mapas são criados a partir de texto
 			--porque--
 				Facilita a criação
-					Usuário não precisa preocupar-se com o layout
-					Rapidez em colocar o conteúdo
+					Usuário não precisa preocupar-se com o layout #1 #2
+					Rapidez em colocar o conteúdo #1 #3
 			--como--
-				Analisando a endentação do texto
+				Analisando a endentação do texto #2
 				Criando o mapa com o Graphviz
 	que ainda não está pronto
 		--pois--
@@ -20,4 +20,6 @@ Novo programa para criar mapas conceituais
 				--prós--
 					permite editar o dot
 				--contra--
-					sempre exige dois passis
+					sempre exige dois passos
+
+--principal-- #3 #4
